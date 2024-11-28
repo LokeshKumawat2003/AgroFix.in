@@ -1,0 +1,45 @@
+.sidebar-sid {
+  background-color: red;
+  width: fit-content;
+  margin-top: 150px;
+}
+.sidrbar-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+  background-color: #038b0c;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: start;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidrbar-box a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidrbar-box a:hover {
+  background-color: #198104;
+}
+
+.sidrbar-box a.active {
+  background-color: #1abc3d;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidrbar-box a {
+    padding: 10px 15px;
+    font-size: 1.3rem;
+  }
+}
