@@ -8,7 +8,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/product")
+      .get("https://agrofix-in-2.onrender.com/product")
       .then((response) => {
         SetProduct(response.data);
       })
@@ -22,7 +22,7 @@ const ProductPage = () => {
     let email = localStorage.getItem("userEmail");
     const productWithUser = { ...product, userEmail: email };
     const res = axios.post(
-      "http://localhost:8080/cart/addtoCart",
+      "https://agrofix-in-2.onrender.com/cart/addtoCart",
       productWithUser,
       {
         headers: {

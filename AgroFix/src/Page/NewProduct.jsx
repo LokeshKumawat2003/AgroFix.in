@@ -39,7 +39,7 @@ const ProductForm = ({ setProducts }) => {
     setError("");
 
     axios
-      .post("http://localhost:8080/product", formData)
+      .post("https://agrofix-in-2.onrender.com/product", formData)
       .then((response) => {
         if (typeof setProducts === "function") {
           setProducts((prev) => [...prev, response.data]);

@@ -7,7 +7,7 @@ const OrderStatus = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/adminCart");
+        const res = await axios.get("https://agrofix-in-2.onrender.com/adminCart");
         console.log(res.data, "res3434");
 
         const email = localStorage.getItem("userEmail");

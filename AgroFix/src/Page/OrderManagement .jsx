@@ -8,7 +8,7 @@ const OrderManagement = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/adminCart/");
+        const response = await axios.get("https://agrofix-in-2.onrender.com/adminCart/");
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching data:", error.message);
@@ -30,7 +30,7 @@ const OrderManagement = () => {
     order.status = newStatus;
     console.log(order);
     const response = await axios.put(
-      `http://localhost:8080/adminCart/${id}`,
+      `https://agrofix-in-2.onrender.com/adminCart/${id}`,
       order,
       {
         headers: {
@@ -42,7 +42,7 @@ const OrderManagement = () => {
 
   const Delete = async (id) => {
     const response = await axios.delete(
-      `http://localhost:8080/adminCart/${id}`
+      `https://agrofix-in-2.onrender.com/adminCart/${id}`
     );
   };
 

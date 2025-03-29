@@ -26,7 +26,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/signup",
+        "https://agrofix-in-2.onrender.com/api/signup",
         formData
       );
 

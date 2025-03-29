@@ -19,7 +19,7 @@ const AdminData = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:8080/product");
+      const response = await fetch("https://agrofix-in-2.onrender.com/product");
       if (!response.ok) throw new Error("Failed to fetch products.");
       const data = await response.json();
       setProducts(data);
@@ -35,7 +35,7 @@ const AdminData = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/product", {
+      const response = await fetch("https://agrofix-in-2.onrender.com/product", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const AdminData = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:8080/product/${editingProduct._id}`, {
+      const response = await fetch(`https://agrofix-in-2.onrender.com/product/${editingProduct._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const AdminData = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:8080/product/${id}`, {
+      const response = await fetch(`https://agrofix-in-2.onrender.com/product/${id}`, {
         method: "DELETE",
       });
 

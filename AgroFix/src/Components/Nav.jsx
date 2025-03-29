@@ -18,7 +18,7 @@ const Nav = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/product");
+        const response = await fetch("https://agrofix-in-2.onrender.com/product");
         const data = await response.json();
         setProducts(data);
       } catch (error) {

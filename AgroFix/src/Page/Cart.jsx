@@ -12,7 +12,7 @@ const Cart = () => {
     if (token) {
       const CartApi = async () => {
         try {
-          const response = await axios.get(`http://localhost:8080/cart`, {
+          const response = await axios.get(`https://agrofix-in-2.onrender.com/cart`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -41,7 +41,7 @@ const Cart = () => {
 
     try {
       await axios.put(
-        `http://localhost:8080/cart/${id}`,
+        `https://agrofix-in-2.onrender.com/cart/${id}`,
         { quantity: newQuantity },
         {
           headers: {
@@ -60,7 +60,7 @@ const Cart = () => {
     setCartItems((prevItems) => prevItems.filter((item) => item._id !== id));
 
     try {
-      await axios.delete(`http://localhost:8080/cart/${id}`, {
+      await axios.delete(`https://agrofix-in-2.onrender.com/cart/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("tokenAgrofix")}`,
         },

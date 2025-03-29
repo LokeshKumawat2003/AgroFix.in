@@ -1,5 +1,5 @@
 const Uri =
-  "mongodb://127.0.0.1:27017/AgroFix";
+  "mongodb+srv://Malviyajay:masai@cluster0.7xg3wkz.mongodb.net/AgroFix?retryWrites=true&w=majority";
 
 const mongoose = require("mongoose");
 

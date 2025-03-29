@@ -19,7 +19,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/profile", {
+      .get("https://agrofix-in-2.onrender.com/profile", {
         headers: { token: localStorage.getItem("token") },
       })
       .then((response) => {
@@ -52,7 +52,7 @@ const ProfilePage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:8080/profile/${profile._id}`, profile, {
+      .put(`https://agrofix-in-2.onrender.com/profile/${profile._id}`, profile, {
         headers: {
           token: localStorage.getItem("tokenAgrofix"),
         },
